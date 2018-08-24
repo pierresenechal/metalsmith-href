@@ -65,6 +65,7 @@ For static websites, some prefer to specificy `--save-dev` to `npm install` as t
 ## Configuring
 
 There are a few options:
+
 name | default | description
 ---- | ------- | -----------
 property | href | name of the metadata property to create/replace
