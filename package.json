@@ -1,0 +1,39 @@
+{
+  "name": "metalsmith-href",
+  "version": "0.1.0",
+  "description": "A Metalsmith plugin to insert files URL in metadata",
+  "keywords": [
+    "href",
+    "link",
+    "metadata",
+    "metalsmith",
+    "url"
+  ],
+  "author": "Pierre Senechal <hello@pierre.sh>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js tests.js",
+    "test": "nyc mocha tests.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "pkginfo": "^0.4.1",
+    "url": "^0.11.0"
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.0.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.4",
+    "eslint": "^5.4.0",
+    "eslint-config-eslint": "^5.0.1",
+    "eslint-plugin-node": "^7.0.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  }
+}
