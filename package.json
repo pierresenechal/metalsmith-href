@@ -1,16 +1,21 @@
 {
   "name": "metalsmith-href",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Metalsmith plugin to insert files URL in metadata",
   "keywords": [
     "href",
     "link",
     "metadata",
     "metalsmith",
+    "metalsmith-plugin",
     "url"
   ],
   "author": "Pierre Senechal <hello@pierre.sh>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierresenechal/metalsmith-href.git"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js tests.js",
