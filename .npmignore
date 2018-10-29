@@ -2,4 +2,5 @@ node_modules
 .nyc_output
 .circleci
 .eslintrc
-tests.js
+coverage.lcov
+lib/tests.js

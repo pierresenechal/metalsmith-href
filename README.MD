@@ -14,6 +14,7 @@ This plugin inserts absolute URLs to files in the metadata. This is useful to fi
 3. Use the `href` property in your templates (see examples below)
 4. (optional) customize the name of the `href` property (see [Configuring](#configuring))
 
+
 ### Example layout
 
 _See [metalsmith-link](https://github.com/pierresenechal/metalsmith-link) to fill the `links` property._
@@ -48,9 +49,6 @@ _See [metalsmith-link](https://github.com/pierresenechal/metalsmith-link) to fil
 ```
 
 
-Since Metalsmith follows a [Pipeline pattern](https://en.wikipedia.org/wiki/Pipeline_%28software%29), the step at which plugins run is important. This plugin should ideally run just before the layout step.
-
-
 ## Installing
 
 With [npm](https://npmjs.org/) installed, run
@@ -63,6 +61,8 @@ For static websites, some prefer to specificy `--save-dev` to `npm install` as t
 
 
 ## Configuring
+
+Since Metalsmith follows a [Pipeline pattern](https://en.wikipedia.org/wiki/Pipeline_%28software%29), the step at which plugins run is important. This plugin should ideally run just before the layout step.
 
 There are a few options:
 
@@ -80,12 +80,13 @@ index | index.html | name of the directory index file to strip (e.g. for links l
 Metalsmith(__dirname)
     .use(link())
     .use(markdown())
-    .use(layouts())
     .use(href({ property: "url", basehref: "https://my-site.tld", index: "index.htm" }))
+    .use(layouts())
     .build(function (err) {
         if (err) throw err;
     });
 ```
+
 
 ### Example configuration with options
 
@@ -96,12 +97,12 @@ Metalsmith(__dirname)
   "plugins": [{
     "metalsmith-link": {},
     "metalsmith-markdown": {},
-    "metalsmith-layous": {},
     "metalsmith-href": {
       "property": "url",
       "basehref": "https://my-site.tld",
       "index": "index.htm"
-    }
+    },
+    "metalsmith-layouts": {}
   }]
 }
 ```
@@ -115,12 +116,15 @@ If you'd like to contribute, please fork the repository and use a feature branch
 ## Links and references
 
 * Source code: [`https://github.com/pierresenechal/metalsmith-href`](https://github.com/pierresenechal/metalsmith-href)
-* Issue tracker: [`https://github.com/pierresenechal/metalsmith-href/issues`](https://github.com/pierresenechal/metalsmith-href)
+* Issue tracker: [`https://github.com/pierresenechal/metalsmith-href/issues`](https://github.com/pierresenechal/metalsmith-href/issues)
 
 ### Related
+
 * Metalsmith Link: [`https://github.com/pierresenechal/metalsmith-link`](https://github.com/pierresenechal/metalsmith-link)
 
+
 ### Dependencies
+
 * Metalsmith: [`https://github.com/segmentio/metalsmith`](https://github.com/segmentio/metalsmith)
 
 
